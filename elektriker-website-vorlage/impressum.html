@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum | [Firmenname]</title>
+<meta name="description" content="Impressum von [Firmenname], Elektriker in [Ort].">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { ink: '#1A1F26', slate: '#3A4552', paper: '#F4F6F8', copper: '#B5652D', volt: '#F5B400', safety: '#D93B3B' },
+      fontFamily: { head: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+    } }
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-paper text-slate">
+
+<header class="bg-ink text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2 font-head font-semibold text-lg">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded bg-volt text-ink font-bold">⚡</span>
+      [Firmenname]
+    </a>
+    <a href="index.html" class="text-sm hover:text-volt">← Zurück zur Startseite</a>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+  <h1 class="font-head text-3xl font-bold text-ink mb-8">Impressum</h1>
+
+  <div class="bg-safety/10 border border-safety/30 text-slate text-sm rounded-lg p-4 mb-10">
+    <strong>Hinweis:</strong> Diese Seite enthält Platzhalter und ersetzt keine Rechtsberatung.
+    Bitte alle Angaben vollständig ausfüllen und vor Veröffentlichung von einem Rechtsanwalt bzw.
+    Steuerberater auf Vollständigkeit und Richtigkeit gemäß § 5 TMG / DDG prüfen lassen.
+  </div>
+
+  <section class="space-y-8 text-sm leading-relaxed">
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Angaben gemäß § 5 TMG / § 5 DDG</h2>
+      <p>[Firmenname]<br>
+      [Rechtsform, z. B. Einzelunternehmen / GmbH / GmbH & Co. KG]<br>
+      [Straße Hausnummer]<br>
+      [PLZ] [Ort]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Vertreten durch</h2>
+      <p>[Inhaber/Geschäftsführer Name]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Kontakt</h2>
+      <p>Telefon: [Telefonnummer]<br>
+      E-Mail: [E-Mail-Adresse]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Registereintrag</h2>
+      <p>[Falls im Handelsregister eingetragen: Registergericht + Registernummer eintragen, sonst Abschnitt entfernen.]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Umsatzsteuer-ID</h2>
+      <p>[Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz, falls vorhanden, sonst Abschnitt entfernen.]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+      <p>[Falls zutreffend: Meisterbetrieb / Handwerkskammer-Eintragung + zuständige Kammer eintragen.]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>[Name, Anschrift wie oben]</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">EU-Streitschlichtung</h2>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+      <a href="https://ec.europa.eu/consumers/odr/" class="underline hover:text-copper" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a><br>
+      Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+    </div>
+
+    <div>
+      <h2 class="font-head text-lg font-semibold text-ink mb-2">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+      <p>[Angeben, ob die Bereitschaft/Verpflichtung zur Teilnahme an einem Streitbeilegungsverfahren vor einer
+      Verbraucherschlichtungsstelle besteht – im Zweifel juristisch prüfen lassen.]</p>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-ink text-white/60 text-center text-xs py-6">
+  © <span data-current-year></span> [Firmenname]. Alle Rechte vorbehalten.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

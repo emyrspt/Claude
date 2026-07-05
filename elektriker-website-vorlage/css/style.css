@@ -1,0 +1,156 @@
+/* =========================================================================
+   Design-Tokens
+   Konzept: „Schaltplan / Leitungsverlauf" — verankert im Arbeitsalltag des
+   Elektrikers (Präzision, Stromkreise, Sicherheit) statt generischem
+   Business-Template-Look.
+
+   Farben:
+   --ink     #1A1F26  Graphit-Navy   – Header/Hero/Footer-Flächen, Fließtext
+   --slate   #3A4552  Sekundär-Dunkel – Fließtext auf hellem Grund
+   --paper   #F4F6F8  Kühles Off-White – Content-Flächen (bewusst NICHT warmes Creme)
+   --copper  #B5652D  Kupfer (Leitungsdraht) – Icons, Rahmen, sekundärer Akzent
+   --volt    #F5B400  Spannungs-Amber – CTAs, Signature-Element „Leiterbahn"
+   --safety  #D93B3B  Warnrot – 24h-Notdienst-Hinweise
+
+   Schriften:
+   Headline: "Space Grotesk" (technisch, geometrisch, Blaupausen-Charakter)
+   Fließtext: "Inter" (ruhig, gut lesbar)
+
+   Signature-Element: die „Leiterbahn" – eine durchgehende Linie mit
+   Lötpunkt-Knoten, die auf Desktop links neben den Sections entlangläuft
+   und die Seite wie eine Schaltung verbindet.
+   ========================================================================= */
+
+:root {
+  --ink: #1A1F26;
+  --slate: #3A4552;
+  --paper: #F4F6F8;
+  --copper: #B5652D;
+  --volt: #F5B400;
+  --safety: #D93B3B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--slate);
+  background-color: var(--paper);
+}
+
+h1, h2, h3, h4, .font-head {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Sichtbare Fokus-Zustände (Barrierefreiheit) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--volt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------------
+   Signature-Element: Leiterbahn (Circuit Trace)
+   --------------------------------------------------------------------- */
+.circuit-rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--volt) 0,
+    var(--volt) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  opacity: 0.55;
+}
+
+.circuit-node {
+  position: relative;
+}
+
+.circuit-node::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0.35em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--volt);
+  box-shadow: 0 0 0 3px rgba(245, 180, 0, 0.18);
+}
+
+@media (max-width: 767px) {
+  .circuit-rail { display: none; }
+  .circuit-node::before { display: none; }
+}
+
+/* Horizontale Leiterbahn als Section-Trenner auf Mobile */
+.circuit-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--copper);
+}
+.circuit-divider::before,
+.circuit-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--volt) 0,
+    var(--volt) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------------------------------
+   Platzhalter-Boxen (kein Foto vorhanden)
+   --------------------------------------------------------------------- */
+.placeholder-box {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(58, 69, 82, 0.06) 0px,
+    rgba(58, 69, 82, 0.06) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border: 2px dashed rgba(58, 69, 82, 0.35);
+  color: var(--slate);
+}
+
+/* ---------------------------------------------------------------------
+   Blueprint-Hintergrundmuster für Hero-Panel
+   --------------------------------------------------------------------- */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(245, 180, 0, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 180, 0, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Cookie-Consent-Banner */
+#cookie-consent {
+  transition: transform 0.4s ease;
+}
+#cookie-consent.is-hidden {
+  transform: translateY(120%);
+}
+
+/* Mobile Navigation */
+#mobile-menu {
+  transition: max-height 0.3s ease;
+}
