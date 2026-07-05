@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Leistung, z. B. Elektroinstallation & Notdienst] in [Ort] | [Firmenname]</title>
+<meta name="description" content="[Firmenname] – Ihr Elektriker in [Ort] und Umgebung. [Kernleistungen einfügen, z. B. Elektroinstallation, Photovoltaik, Wallbox, Notdienst]. Jetzt kostenlos anfragen.">
+<link rel="canonical" href="https://www.[domain].de/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="[Firmenname] – Elektriker in [Ort]">
+<meta property="og:description" content="[Kurze Beschreibung der Leistungen einfügen]">
+<meta property="og:locale" content="de_DE">
+
+<!-- Google Fonts: Space Grotesk (Headline) + Inter (Fließtext) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS via CDN (kein Build-Schritt nötig) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#1A1F26',
+          slate: '#3A4552',
+          paper: '#F4F6F8',
+          copper: '#B5652D',
+          volt: '#F5B400',
+          safety: '#D93B3B'
+        },
+        fontFamily: {
+          head: ['Space Grotesk', 'sans-serif'],
+          body: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Schema.org: LocalBusiness / Electrician -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "[Firmenname]",
+  "image": "https://www.[domain].de/images/logo.png",
+  "telephone": "[Telefonnummer, z. B. +49XXXXXXXXXX]",
+  "email": "[E-Mail-Adresse]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Straße Hausnummer]",
+    "addressLocality": "[Ort]",
+    "postalCode": "[PLZ]",
+    "addressCountry": "DE"
+  },
+  "areaServed": "[Einzugsgebiet, z. B. Ort + Umkreis]",
+  "url": "https://www.[domain].de/",
+  "openingHours": "[Öffnungszeiten, z. B. Mo-Fr 08:00-17:00]",
+  "priceRange": "[$$]"
+}
+</script>
+</head>
+<body class="font-body bg-paper text-slate">
+
+<!-- ==================== HEADER ==================== -->
+<header class="bg-ink text-white sticky top-0 z-40 shadow-lg shadow-black/20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo (Platzhalter, falls kein Logo-Bild vorhanden) -->
+      <a href="#top" class="flex items-center gap-2 font-head font-semibold text-lg md:text-xl tracking-tight">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded bg-volt text-ink font-bold">⚡</span>
+        <span>[Firmenname]</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Hauptnavigation">
+        <a href="#leistungen" class="hover:text-volt transition-colors">Leistungen</a>
+        <a href="#warum-uns" class="hover:text-volt transition-colors">Warum wir</a>
+        <a href="#ueber-uns" class="hover:text-volt transition-colors">Über uns</a>
+        <a href="#einzugsgebiet" class="hover:text-volt transition-colors">Einzugsgebiet</a>
+        <a href="#kontakt" class="hover:text-volt transition-colors">Kontakt</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:[Telefonnummer]" class="flex items-center gap-2 text-sm font-semibold hover:text-volt transition-colors">
+          <span aria-hidden="true">📞</span> [Telefonnummer eintragen]
+        </a>
+        <a href="#kontakt" class="bg-volt text-ink font-semibold text-sm px-4 py-2.5 rounded hover:brightness-95 transition">
+          Kostenlos anfragen
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded hover:bg-white/10" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0" aria-label="Mobile Navigation">
+      <div class="flex flex-col gap-1 pb-4 text-sm font-medium">
+        <a href="#leistungen" class="py-2 hover:text-volt">Leistungen</a>
+        <a href="#warum-uns" class="py-2 hover:text-volt">Warum wir</a>
+        <a href="#ueber-uns" class="py-2 hover:text-volt">Über uns</a>
+        <a href="#einzugsgebiet" class="py-2 hover:text-volt">Einzugsgebiet</a>
+        <a href="#kontakt" class="py-2 hover:text-volt">Kontakt</a>
+        <a href="tel:[Telefonnummer]" class="py-2 font-semibold">📞 [Telefonnummer eintragen]</a>
+        <a href="#kontakt" class="mt-2 bg-volt text-ink font-semibold text-center px-4 py-2.5 rounded">Kostenlos anfragen</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ==================== HERO ==================== -->
+  <section class="relative bg-ink text-white overflow-hidden">
+    <div class="absolute inset-0 blueprint-grid pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="inline-block bg-safety/90 text-white text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded mb-5">
+          [24h Notdienst – falls zutreffend, sonst Zeile entfernen]
+        </p>
+        <h1 class="font-head text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
+          Ihr Elektriker in [Ort] für [Kernleistung, z. B. Elektroinstallation & Notdienst]
+        </h1>
+        <p class="text-white/80 text-base md:text-lg mb-8 max-w-xl">
+          [Kurzer Subline-Satz mit dem wichtigsten Nutzenversprechen des Betriebs – bitte aus Abschnitt 1 (USP) ausfüllen.]
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:[Telefonnummer]" class="inline-flex items-center justify-center gap-2 bg-volt text-ink font-semibold px-6 py-3.5 rounded hover:brightness-95 transition">
+            📞 Jetzt anrufen
+          </a>
+          <a href="#kontakt" class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-semibold px-6 py-3.5 rounded hover:bg-white/10 transition">
+            Anfrage senden
+          </a>
+        </div>
+
+        <!-- Vertrauens-Leiste: nur zutreffende Chips behalten, Rest löschen -->
+        <ul class="mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70">
+          <li>✓ [Meisterbetrieb]</li>
+          <li>✓ [Anzahl Jahre] Jahre Erfahrung</li>
+          <li>✓ [Festpreisgarantie]</li>
+          <li>✓ [24h Notdienst]</li>
+        </ul>
+      </div>
+
+      <!-- Signature-Visual: Schaltplan-Panel statt Foto -->
+      <div class="relative hidden md:block">
+        <svg viewBox="0 0 400 320" class="w-full h-auto" role="img" aria-label="Stilisierter Schaltplan als Designelement">
+          <rect x="1" y="1" width="398" height="318" rx="12" fill="#232A34" stroke="#3A4552"/>
+          <circle cx="60" cy="60" r="7" fill="#F5B400"/>
+          <circle cx="200" cy="60" r="7" fill="#F5B400"/>
+          <circle cx="340" cy="60" r="7" fill="#B5652D"/>
+          <circle cx="60" cy="180" r="7" fill="#B5652D"/>
+          <circle cx="200" cy="180" r="7" fill="#F5B400"/>
+          <circle cx="340" cy="180" r="7" fill="#F5B400"/>
+          <circle cx="60" cy="260" r="7" fill="#F5B400"/>
+          <circle cx="340" cy="260" r="7" fill="#B5652D"/>
+          <path d="M60 60 H200 V180 H340 M200 60 V180 M60 180 V260 H340 V260" stroke="#F5B400" stroke-width="2" fill="none" opacity="0.7"/>
+          <rect x="150" y="150" width="100" height="60" rx="4" fill="none" stroke="#F5B400" stroke-width="2" opacity="0.8"/>
+          <text x="200" y="185" text-anchor="middle" fill="#F5B400" font-family="monospace" font-size="12">⚡</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="relative">
+    <div class="circuit-rail hidden md:block" style="left: 1.5rem;" aria-hidden="true"></div>
+
+    <!-- ==================== LEISTUNGEN ==================== -->
+    <!-- Hinweis: Liste an die tatsächlichen Leistungen des Betriebs aus Abschnitt 1 anpassen -->
+    <section id="leistungen" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="md:pl-10 circuit-node">
+        <h2 class="font-head text-2xl md:text-3xl font-bold text-ink mb-3">Unsere Leistungen in [Ort]</h2>
+        <p class="text-slate/80 max-w-2xl mb-10">[Kurzer Einleitungssatz zu den angebotenen Leistungen einfügen.]</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:pl-10">
+        <article class="bg-white rounded-lg border border-slate/10 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <div class="w-11 h-11 rounded bg-volt/15 text-copper flex items-center justify-center text-xl mb-4" aria-hidden="true">🔌</div>
+          <h3 class="font-head font-semibold text-lg text-ink mb-2">Elektroinstallation</h3>
+          <p class="text-sm text-slate/80">[Beschreibung der Leistung – Neubau, Altbau, Sanierung etc. anpassen.]</p>
+        </article>
+        <article class="bg-white rounded-lg border border-slate/10 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <div class="w-11 h-11 rounded bg-volt/15 text-copper flex items-center justify-center text-xl mb-4" aria-hidden="true">☀️</div>
+          <h3 class="font-head font-semibold text-lg text-ink mb-2">Photovoltaik</h3>
+          <p class="text-sm text-slate/80">[Beschreibung der PV-Leistungen einfügen, falls angeboten – sonst Karte entfernen.]</p>
+        </article>
+        <article class="bg-white rounded-lg border border-slate/10 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <div class="w-11 h-11 rounded bg-volt/15 text-copper flex items-center justify-center text-xl mb-4" aria-hidden="true">🔋</div>
+          <h3 class="font-head font-semibold text-lg text-ink mb-2">Wallbox / E-Ladestationen</h3>
+          <p class="text-sm text-slate/80">[Beschreibung einfügen, falls angeboten – sonst Karte entfernen.]</p>
+        </article>
+        <article class="bg-white rounded-lg border border-slate/10 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <div class="w-11 h-11 rounded bg-volt/15 text-copper flex items-center justify-center text-xl mb-4" aria-hidden="true">🏠</div>
+          <h3 class="font-head font-semibold text-lg text-ink mb-2">Smart Home</h3>
+          <p class="text-sm text-slate/80">[Beschreibung einfügen, falls angeboten – sonst Karte entfernen.]</p>
+        </article>
+        <article class="bg-white rounded-lg border border-slate/10 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <div class="w-11 h-11 rounded bg-volt/15 text-copper flex items-center justify-center text-xl mb-4" aria-hidden="true">🛡️</div>
+          <h3 class="font-head font-semibold text-lg text-ink mb-2">Sicherheitstechnik</h3>
+          <p class="text-sm text-slate/80">[Beschreibung einfügen, falls angeboten – sonst Karte entfernen.]</p>
+        </article>
+        <article class="bg-white rounded-lg border border-slate/10 p-6 hover:shadow-lg hover:-translate-y-0.5 transition">
+          <div class="w-11 h-11 rounded bg-volt/15 text-copper flex items-center justify-center text-xl mb-4" aria-hidden="true">✅</div>
+          <h3 class="font-head font-semibold text-lg text-ink mb-2">E-Check & Zählerschrank</h3>
+          <p class="text-sm text-slate/80">[Beschreibung einfügen, falls angeboten – sonst Karte entfernen.]</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="md:hidden circuit-divider px-4"><span class="text-xs font-medium uppercase tracking-wide">●</span></div>
+
+    <!-- ==================== WARUM WIR ==================== -->
+    <!-- Hinweis: Nur Trust-Signale zeigen, die in Abschnitt 1 tatsächlich angegeben wurden -->
+    <section id="warum-uns" class="bg-ink text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <div class="md:pl-10 circuit-node">
+          <h2 class="font-head text-2xl md:text-3xl font-bold mb-10">Warum [Firmenname]?</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:pl-10">
+          <div class="bg-white/5 border border-white/10 rounded-lg p-6">
+            <div class="text-volt text-2xl mb-3" aria-hidden="true">🎓</div>
+            <h3 class="font-head font-semibold mb-1">[Meisterbetrieb]</h3>
+            <p class="text-sm text-white/70">[Zertifizierung/Qualifikation aus Abschnitt 1 einfügen.]</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-lg p-6">
+            <div class="text-volt text-2xl mb-3" aria-hidden="true">⏱️</div>
+            <h3 class="font-head font-semibold mb-1">[Anzahl] Jahre Erfahrung</h3>
+            <p class="text-sm text-white/70">[Gründungsjahr / Erfahrung aus Abschnitt 1 einfügen.]</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-lg p-6">
+            <div class="text-volt text-2xl mb-3" aria-hidden="true">🚨</div>
+            <h3 class="font-head font-semibold mb-1">[24h Notdienst]</h3>
+            <p class="text-sm text-white/70">[Reaktionszeit/Erreichbarkeit aus Abschnitt 1 einfügen.]</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-lg p-6">
+            <div class="text-volt text-2xl mb-3" aria-hidden="true">💶</div>
+            <h3 class="font-head font-semibold mb-1">[Festpreisgarantie]</h3>
+            <p class="text-sm text-white/70">[USP aus Abschnitt 1 einfügen.]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ÜBER UNS ==================== -->
+    <section id="ueber-uns" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center md:pl-10">
+        <div class="circuit-node">
+          <h2 class="font-head text-2xl md:text-3xl font-bold text-ink mb-5">Über uns</h2>
+          <p class="text-slate/90 leading-relaxed mb-4">
+            [Kurzer, persönlicher Text über den Betrieb und den/die Inhaber:in – z. B. Gründungsgeschichte,
+            Familienbetrieb, Werte. Bitte aus Abschnitt 1 ausfüllen und nichts erfinden.]
+          </p>
+          <p class="font-head font-semibold text-ink">[Inhaber/Ansprechpartner-Name]</p>
+          <p class="text-sm text-slate/70">Inhaber, [Firmenname]</p>
+        </div>
+        <div class="placeholder-box rounded-lg aspect-[4/3] flex items-center justify-center text-center p-6">
+          <p class="text-sm">[Firmen-/Teamfoto folgt – bitte Bild in images/ ablegen und dieses Element ersetzen]</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="md:hidden circuit-divider px-4"><span class="text-xs font-medium uppercase tracking-wide">●</span></div>
+
+    <!-- ==================== REFERENZEN ==================== -->
+    <!-- Hinweis: Nur anzeigen, sobald echte Google-Bewertungen/Testimonials vorliegen. -->
+    <section id="referenzen" class="bg-white border-y border-slate/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <div class="md:pl-10 circuit-node">
+          <h2 class="font-head text-2xl md:text-3xl font-bold text-ink mb-3">Das sagen unsere Kunden</h2>
+          <p class="text-slate/80 mb-10">[Bewertungen folgen]</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:pl-10">
+          <blockquote class="placeholder-box rounded-lg p-6 text-sm">
+            „[Kundenzitat 1 folgt – bitte durch echtes Testimonial ersetzen oder Karte entfernen]"
+          </blockquote>
+          <blockquote class="placeholder-box rounded-lg p-6 text-sm">
+            „[Kundenzitat 2 folgt – bitte durch echtes Testimonial ersetzen oder Karte entfernen]"
+          </blockquote>
+          <blockquote class="placeholder-box rounded-lg p-6 text-sm">
+            „[Kundenzitat 3 folgt – bitte durch echtes Testimonial ersetzen oder Karte entfernen]"
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EINZUGSGEBIET ==================== -->
+    <section id="einzugsgebiet" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="md:pl-10 circuit-node">
+        <h2 class="font-head text-2xl md:text-3xl font-bold text-ink mb-4">Unser Einzugsgebiet</h2>
+        <p class="text-slate/90 leading-relaxed max-w-2xl mb-6">
+          [Firmenname] ist für Sie in [Ort] und Umgebung im Einsatz. [Kurzer Zusatztext, z. B. Umkreis in km.]
+        </p>
+        <ul class="flex flex-wrap gap-3 text-sm">
+          <li class="bg-white border border-slate/15 rounded-full px-4 py-1.5">[Ort 1]</li>
+          <li class="bg-white border border-slate/15 rounded-full px-4 py-1.5">[Ort 2]</li>
+          <li class="bg-white border border-slate/15 rounded-full px-4 py-1.5">[Ort 3]</li>
+          <li class="bg-white border border-slate/15 rounded-full px-4 py-1.5">[weitere Orte ergänzen]</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="md:hidden circuit-divider px-4"><span class="text-xs font-medium uppercase tracking-wide">●</span></div>
+
+    <!-- ==================== KONTAKT ==================== -->
+    <section id="kontakt" class="bg-white border-t border-slate/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <div class="md:pl-10 circuit-node mb-10">
+          <h2 class="font-head text-2xl md:text-3xl font-bold text-ink mb-3">Jetzt kostenlos anfragen</h2>
+          <p class="text-slate/80 max-w-2xl">Rufen Sie uns an oder senden Sie uns Ihre Anfrage über das Formular – wir melden uns zeitnah zurück.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-10 md:pl-10">
+          <!-- Formular -->
+          <div class="lg:col-span-3">
+            <!--
+              Formular-Backend (bitte EINE Variante wählen, siehe README.md):
+              1) Web3Forms: action="https://api.web3forms.com/submit" + Hidden-Input "access_key"
+              2) Formspree: action="https://formspree.io/f/DEINE_FORM_ID"
+              3) Eigenes PHP-Skript mit PHPMailer + Hostinger-SMTP (smtp.hostinger.com, Port 587)
+              Aktuell als Platzhalter auf Web3Forms vorbereitet.
+            -->
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+              <input type="hidden" name="access_key" value="[WEB3FORMS_ACCESS_KEY_EINTRAGEN]">
+              <input type="hidden" name="subject" value="Neue Anfrage über die Website – [Firmenname]">
+              <!-- Honeypot-Feld gegen Spam-Bots (muss leer bleiben) -->
+              <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-ink mb-1.5">Name *</label>
+                  <input type="text" id="name" name="name" required maxlength="100"
+                    class="w-full border border-slate/25 rounded px-4 py-2.5 focus:outline-none">
+                </div>
+                <div>
+                  <label for="telefon" class="block text-sm font-medium text-ink mb-1.5">Telefon *</label>
+                  <input type="tel" id="telefon" name="telefon" required maxlength="30"
+                    class="w-full border border-slate/25 rounded px-4 py-2.5 focus:outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-ink mb-1.5">E-Mail *</label>
+                <input type="email" id="email" name="email" required maxlength="150"
+                  class="w-full border border-slate/25 rounded px-4 py-2.5 focus:outline-none">
+              </div>
+
+              <div>
+                <label for="betreff" class="block text-sm font-medium text-ink mb-1.5">Betreff</label>
+                <select id="betreff" name="betreff"
+                  class="w-full border border-slate/25 rounded px-4 py-2.5 bg-white focus:outline-none">
+                  <option value="Notdienst">Notdienst</option>
+                  <option value="Beratung">Beratung</option>
+                  <option value="Angebot">Angebot anfragen</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="nachricht" class="block text-sm font-medium text-ink mb-1.5">Nachricht *</label>
+                <textarea id="nachricht" name="nachricht" rows="5" required maxlength="2000"
+                  class="w-full border border-slate/25 rounded px-4 py-2.5 focus:outline-none"></textarea>
+              </div>
+
+              <p class="text-xs text-slate/60">
+                Mit dem Absenden stimme ich der Verarbeitung meiner Daten gemäß der
+                <a href="datenschutz.html" class="underline hover:text-copper">Datenschutzerklärung</a> zu. *
+              </p>
+
+              <button type="submit" class="w-full sm:w-auto bg-volt text-ink font-semibold px-8 py-3 rounded hover:brightness-95 transition">
+                Anfrage senden
+              </button>
+              <p id="form-status" role="status" aria-live="polite" class="mt-2 text-sm"></p>
+            </form>
+          </div>
+
+          <!-- Kontaktdaten + Karte -->
+          <div class="lg:col-span-2 space-y-6">
+            <div class="bg-paper border border-slate/10 rounded-lg p-6 space-y-3 text-sm">
+              <p class="flex items-start gap-2"><span aria-hidden="true">📍</span> [Straße Hausnummer], [PLZ] [Ort]</p>
+              <p class="flex items-start gap-2"><span aria-hidden="true">📞</span> <a href="tel:[Telefonnummer]" class="hover:text-copper">[Telefonnummer]</a></p>
+              <p class="flex items-start gap-2"><span aria-hidden="true">✉️</span> <a href="mailto:[E-Mail-Adresse]" class="hover:text-copper">[E-Mail-Adresse]</a></p>
+              <p class="flex items-start gap-2"><span aria-hidden="true">💬</span> [WhatsApp-Nummer, falls vorhanden – sonst Zeile entfernen]</p>
+              <p class="flex items-start gap-2"><span aria-hidden="true">🕒</span> [Öffnungszeiten eintragen]</p>
+            </div>
+
+            <!-- Google Maps: erst nach Cookie-Zustimmung geladen (DSGVO) -->
+            <div class="relative rounded-lg overflow-hidden border border-slate/10 aspect-[4/3]">
+              <div id="map-placeholder" class="placeholder-box absolute inset-0 flex items-center justify-center text-center p-6 text-sm">
+                Karte wird nach Zustimmung zu externen Inhalten geladen (Cookie-Hinweis unten). Bitte in <code>data-src</code> die echte Google-Maps-Embed-URL für [Straße, PLZ Ort] eintragen.
+              </div>
+              <iframe id="map-frame" class="hidden absolute inset-0 w-full h-full" loading="lazy"
+                data-src="https://www.google.com/maps?q=[Adresse-URL-encodiert]&output=embed"
+                title="Standort von [Firmenname] auf Google Maps" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-ink text-white/80">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <p class="font-head font-semibold text-white text-lg mb-3">[Firmenname]</p>
+      <p>[Straße Hausnummer]</p>
+      <p>[PLZ] [Ort]</p>
+    </div>
+    <div>
+      <p class="font-head font-semibold text-white mb-3">Kontakt</p>
+      <p><a href="tel:[Telefonnummer]" class="hover:text-volt">[Telefonnummer]</a></p>
+      <p><a href="mailto:[E-Mail-Adresse]" class="hover:text-volt">[E-Mail-Adresse]</a></p>
+      <p class="mt-2">[Öffnungszeiten eintragen]</p>
+    </div>
+    <div>
+      <p class="font-head font-semibold text-white mb-3">Rechtliches</p>
+      <p><a href="impressum.html" class="hover:text-volt">Impressum</a></p>
+      <p><a href="datenschutz.html" class="hover:text-volt">Datenschutzerklärung</a></p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-white/50">
+    © <span data-current-year></span> [Firmenname]. Alle Rechte vorbehalten.
+  </div>
+</footer>
+
+<!-- Cookie-Consent-Banner (DSGVO) für Google Maps -->
+<div id="cookie-consent" class="is-hidden fixed inset-x-0 bottom-0 z-50 bg-ink text-white p-4 sm:p-5 shadow-2xl">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center gap-4">
+    <p class="text-sm flex-1">
+      Wir nutzen auf dieser Seite eine eingebettete Google-Maps-Karte. Beim Laden werden Daten an Google übertragen.
+      Mehr dazu in unserer <a href="datenschutz.html" class="underline hover:text-volt">Datenschutzerklärung</a>.
+    </p>
+    <div class="flex gap-3 shrink-0">
+      <button id="cookie-decline" class="border border-white/30 text-sm px-4 py-2 rounded hover:bg-white/10">Ablehnen</button>
+      <button id="cookie-accept" class="bg-volt text-ink text-sm font-semibold px-4 py-2 rounded hover:brightness-95">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
